@@ -2,7 +2,7 @@
 This template can be used to create assets for Ravel 
 
 ## Step 1
-Download this project and it's corresponding unity version 
+Download this project and it's corresponding unity version (2021.2.10f1)
 
 ## Step 2
 Open the projec and open up "RavelScene" under Assets/Scenes
@@ -12,7 +12,7 @@ Create your environment, add prefabs of models under the "Level" gameobject.
 If you want to be able to walk on a surface, make sure to add a collider to that gameobject 
 
 ## Step 4
-Build your assetbundle by pressing Ravel->Build AssetBundles on the top navigation bar
+Save your scene (CTRL+S) and build your assetbundle by pressing Ravel->Build AssetBundles on the top navigation bar
 
 ## Step 5
 Your assetbundle named ravelassetbundle is created in the StreamingAssets folder and is now ready to be uploaded
