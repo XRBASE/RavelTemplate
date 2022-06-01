@@ -2,13 +2,18 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Mm]emoryCaptures/
+RavelTemplate/[Ll]ibrary/
+RavelTemplate/[Tt]emp/
+RavelTemplate/[Oo]bj/
+RavelTemplate/[Bb]uild/
+RavelTemplate/[Bb]uilds/
+RavelTemplate/[Ll]ogs/
+RavelTemplate/[Mm]emoryCaptures/
+RavelTemplate/.idea/
+RavelTemplate/UserSettings/
+
+# AddressableAssets
+RavelTemplate/[Aa]ssets/AddressableAssetsData/**/*.bin*
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
