@@ -2,7 +2,7 @@
 This template can be used to create assets for Ravel 
 
 ## Step 1 - Download
-Download this project and it's corresponding unity version (2021.2.10f1)
+Download this project and it's corresponding unity version (2021.2.10f1) with Unity Hub. Also install the Webgl build support in this unity version at Installs->2021.2.10f1->Add Modules->WebGL Build Support.
 
 ## Step 2 - Open Scene
 Open the projec and open up "RavelScene" under Assets/Scenes
