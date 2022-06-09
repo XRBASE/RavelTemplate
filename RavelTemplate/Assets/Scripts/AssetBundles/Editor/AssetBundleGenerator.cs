@@ -1,11 +1,11 @@
-
 using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace Ravel.System
+namespace AssetBundles.Editor
 {
-    public static class AssetBundleCreator
+    public static class AssetBundleGenerator
     {
         [MenuItem("Ravel/Build AssetBundles")]
         public static void BuildAllAssetBundles()
@@ -15,8 +15,10 @@ namespace Ravel.System
                 Directory.CreateDirectory(Application.streamingAssetsPath);
             }
 
-            BuildPipeline.BuildAssetBundles(Application.streamingAssetsPath, BuildAssetBundleOptions.None,
+            var bundle = BuildPipeline.BuildAssetBundles(Application.streamingAssetsPath, BuildAssetBundleOptions.None,
                 BuildTarget.WebGL);
+            
+            Debug.Log($"Successfully created assetbundle at {Application.streamingAssetsPath}/{bundle.GetAllAssetBundles().First()} ");
         }
     }
 }
