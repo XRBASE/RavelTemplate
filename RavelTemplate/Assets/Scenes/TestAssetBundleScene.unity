@@ -168,4 +168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assetBundleName: ravelassetbundle
+  navMeshAgent: {fileID: 6115246022363671451, guid: 3c7bb80a1c03b7d47b1c0399f646870b,
+    type: 3}
   camera: {fileID: 2532089140462322481, guid: c04d1b40dfa7ff84fa65a3bbe51d2639, type: 3}
