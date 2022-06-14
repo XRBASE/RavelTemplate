@@ -43,16 +43,22 @@ public static class AssetBundleManager
         GameObject level = GameObject.Find("Level");
         if (level == null)
         {
-            Debug.LogError(
-                "No Level found, Please add a GameObject named Level to the scene and add your gameobjects as a child");
+            Debug.LogError("No Level found, Please add a GameObject named Level to the scene and add your gameobjects as a child");
             return;
         }
 
-        var navMeshSurface = level.AddComponent<NavMeshSurface>();
-        navMeshSurface.useGeometry = NavMeshCollectGeometry.PhysicsColliders;
-        navMeshSurface.collectObjects = CollectObjects.Children;
-        navMeshSurface.layerMask = LayerMask.NameToLayer("NavMeshSurface");
-        navMeshSurface.BuildNavMesh();
+        var navMeshSurface = level.GetComponent<NavMeshSurface>();
+        if (navMeshSurface == null)
+        {
+            navMeshSurface = level.AddComponent<NavMeshSurface>();
+        }
+        if (navMeshSurface.navMeshData == null)
+        {
+            navMeshSurface.useGeometry = NavMeshCollectGeometry.PhysicsColliders;
+            navMeshSurface.collectObjects = CollectObjects.Children;
+            navMeshSurface.layerMask = LayerMask.NameToLayer("NavMeshSurface"); 
+            navMeshSurface.BuildNavMesh();
+        }
     }
 
 #if UNITY_EDITOR
