@@ -1,9 +1,9 @@
 using System;
+using System.IO;
 using UnityEngine;
 
 public class AssetBundleLoader : MonoBehaviour
 {
-    public string assetBundleName = "ravelassetbundle";
     public GameObject navMeshAgent;
     public GameObject camera;
     private Action<AssetBundle> _onAssetBundleLoaded;
@@ -15,7 +15,16 @@ public class AssetBundleLoader : MonoBehaviour
         _onAssetBundleLoaded += AssetBundleManager.LoadSceneFromAssetBundle;
         _onAssetBundleLoaded += AssetBundleLoaded;
         DontDestroyOnLoad(Instantiate(camera));
-        AssetBundleManager.GetLocalAssetBundle(assetBundleName, _onAssetBundleLoaded);
+        foreach (string file in Directory.GetFiles(Application.streamingAssetsPath))
+        {
+            var extension = Path.GetExtension(Application.streamingAssetsPath + file);
+            if(string.IsNullOrEmpty(extension) && file != "StreamingAssets")
+            {
+                AssetBundleManager.GetLocalAssetBundle(file, _onAssetBundleLoaded);
+                return;
+            }
+        }
+
     }
 
     private void AssetBundleLoaded(AssetBundle bundle)
