@@ -12,7 +12,7 @@ namespace AssetBundles.Editor
     {
         public static List<string> LogMessages = new List<string>();
         public static List<string> ErrorMessages = new List<string>();
-        private static string _messasge;
+        private static string _message;
         private static bool _isBuild;
         
         [MenuItem("Ravel/Build AssetBundles")]
@@ -47,17 +47,17 @@ namespace AssetBundles.Editor
             
             foreach (var scenePath in loadedBundle.GetAllScenePaths())
             {
-                _messasge = $"Scene found {scenePath}";
-                LogMessages.Add(_messasge);
-                Debug.Log(_messasge);
+                _message = $"Scene found {scenePath}";
+                LogMessages.Add(_message);
+                Debug.Log(_message);
             }
 
             if (loadedBundle.GetAllScenePaths().Length > 1)
             {
-                _messasge =
+                _message =
                     "Multiple scenes found in assetbundle, please make sure there is only one scene present in the assetbundle, for more information please visit the Ravel documentation";
-                ErrorMessages.Add(_messasge);
-                Debug.LogError(_messasge);
+                ErrorMessages.Add(_message);
+                Debug.LogError(_message);
                 foreach (var assetbundle in assetBundleManifest.GetAllAssetBundles())
                 {
                     foreach (string file in Directory.GetFiles(Application.streamingAssetsPath))
@@ -65,10 +65,10 @@ namespace AssetBundles.Editor
                         if (Path.GetFileNameWithoutExtension(file) == assetbundle)
                         {
                             FileUtil.DeleteFileOrDirectory(Path.Combine(Application.streamingAssetsPath, file));
-                            _messasge = $"Deleting file {Path.Combine(Application.streamingAssetsPath, file)}";
-                                ErrorMessages.Add(_messasge);
-                            Debug.LogError(_messasge);
-                            Debug.Log(_messasge);
+                            _message = $"Deleting file {Path.Combine(Application.streamingAssetsPath, file)}";
+                                ErrorMessages.Add(_message);
+                            Debug.LogError(_message);
+                            Debug.Log(_message);
                         }
                     }
                 }
@@ -78,10 +78,10 @@ namespace AssetBundles.Editor
             }
 
             loadedBundle.Unload(true);
-            _messasge =
+            _message =
                 $"Successfully created assetbundle at {Application.streamingAssetsPath}/{assetBundleManifest.GetAllAssetBundles().First()} ";
-            LogMessages.Add(_messasge);
-            Debug.Log(_messasge);
+            LogMessages.Add(_message);
+            Debug.Log(_message);
             _isBuild = true;
         }
         
