@@ -81,7 +81,7 @@ public static class AssetBundleManager
     public static void GetLocalAssetBundle(string filePath, Action<AssetBundle> callback)
     {
         var assetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, filePath));
-        if (assetBundle == null)
+        if (assetBundle == null) 
         {
             Debug.Log("Failed to load AssetBundle!");
             return;
