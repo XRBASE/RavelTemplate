@@ -1,7 +1,8 @@
-using System.CodeDom;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace AssetBundles.Editor
         public static List<string> LogMessages = new List<string>();
         public static List<string> ErrorMessages = new List<string>();
         private static string _message;
+        private static string _assetBundleName = string.Empty;
         private static bool _isBuild;
         
         [MenuItem("Ravel/Build AssetBundles")]
@@ -34,6 +36,7 @@ namespace AssetBundles.Editor
 
             var assetBundleManifest = BuildPipeline.BuildAssetBundles(Application.streamingAssetsPath, BuildAssetBundleOptions.None,
                 BuildTarget.WebGL);
+            
 
             var loadedBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, assetBundleManifest.GetAllAssetBundles().First()));
 
@@ -76,17 +79,17 @@ namespace AssetBundles.Editor
                 loadedBundle.Unload(true);
                 return;
             }
-
             loadedBundle.Unload(true);
-            _message =
-                $"Successfully created assetbundle at {Application.streamingAssetsPath}/{assetBundleManifest.GetAllAssetBundles().First()} ";
-            LogMessages.Add(_message);
-            Debug.Log(_message);
+            SetAssetBundle($"{Application.streamingAssetsPath}/",assetBundleManifest.GetAllAssetBundles().First(), _assetBundleName + Guid.NewGuid());
             _isBuild = true;
         }
-        
+
         private void OnGUI()
         {
+            _assetBundleName = EditorGUILayout.TextField("AssetBundleName:", _assetBundleName);
+
+            if (_assetBundleName == string.Empty)
+                return;
             if (GUILayout.Button("Build"))
             {
                 _isBuild = false;
@@ -117,6 +120,30 @@ namespace AssetBundles.Editor
                 }
 
             }
+        }
+        
+        public static void SetAssetBundle( string filepath, string oldAssetBundleName,string newAssetBundleName = "", string assetBundleVariant = "" )
+        {
+            string meta = ".meta";
+            string manifest = ".manifest";
+            var metaFilePath = filepath + oldAssetBundleName + meta;
+            var lines        = File.ReadAllLines( metaFilePath );
+            var name         = "assetBundleName: " + newAssetBundleName;
+            var variant      = "assetBundleVariant: " + assetBundleVariant;
+            for( var i = 0; i < lines.Length; i++ )
+            {
+                lines[i] = Regex.Replace( lines[i], @"assetBundleName: \S*", name );
+                lines[i] = Regex.Replace( lines[i], @"assetBundleVariant: \S*", variant );
+            }
+            File.WriteAllLines(metaFilePath , lines);
+            File.Move(filepath + oldAssetBundleName, filepath + newAssetBundleName);
+            File.Move(filepath + oldAssetBundleName + meta, filepath + newAssetBundleName + meta);
+            File.Move(filepath + oldAssetBundleName + manifest, filepath + newAssetBundleName + manifest);
+            File.Move(filepath + oldAssetBundleName + manifest + meta, filepath + newAssetBundleName + manifest + meta);
+            _message =
+                $"Successfully created assetbundle at {filepath + newAssetBundleName} ";
+            LogMessages.Add(_message);
+            Debug.Log(_message);
         }
     }
 }
