@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -34,12 +33,47 @@ namespace AssetBundles.Editor
                 Directory.CreateDirectory(Application.streamingAssetsPath);
             }
 
+            int foundAssetBundles = 0;
+            string fileToRenameAssetBundle = string.Empty;
+            string oldAssetBundleName = string.Empty;
+            foreach (var findAsset in AssetDatabase.FindAssets("t: Scene"))
+            {
+                var path = AssetDatabase.GUIDToAssetPath(findAsset);
+                if (!path.Contains("Packages"))
+                {
+                    var assetBundleName = AssetDatabase.GetImplicitAssetBundleName(path);
+                    if (assetBundleName != string.Empty)
+                    {
+                        oldAssetBundleName = assetBundleName;
+                        fileToRenameAssetBundle = path;
+                        foundAssetBundles++;
+                    }
+                    if (foundAssetBundles > 1)
+                    {
+                        _message =
+                            "Multiple scenes are marked as an assetbundle, please make sure exactly one scene is included in the assetbundle and you have exactly one assetbundle";
+                        ErrorMessages.Add(_message);
+                        _message = path;
+                        ErrorMessages.Add(_message);
+                        _message = AssetDatabase.GetImplicitAssetBundleName(path);
+                        ErrorMessages.Add(_message);
+                        Debug.LogError(path);
+                        Debug.LogError(AssetDatabase.GetImplicitAssetBundleName(path));
+                        Debug.LogError(_message);
+                        return;
+                    }
+                }
+            }
+            Debug.LogError(fileToRenameAssetBundle);
+            string newAssetBundleName = _assetBundleName + Guid.NewGuid();
+            AssetImporter.GetAtPath(fileToRenameAssetBundle).SetAssetBundleNameAndVariant(newAssetBundleName, "");
+            
             var assetBundleManifest = BuildPipeline.BuildAssetBundles(Application.streamingAssetsPath, BuildAssetBundleOptions.None,
                 BuildTarget.WebGL);
             
 
             var loadedBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, assetBundleManifest.GetAllAssetBundles().First()));
-
+            
             foreach (string file in Directory.GetFiles(Application.streamingAssetsPath))
             {
                 if (Path.GetFileNameWithoutExtension(file) == "StreamingAssets")
@@ -80,7 +114,12 @@ namespace AssetBundles.Editor
                 return;
             }
             loadedBundle.Unload(true);
-            SetAssetBundle($"{Application.streamingAssetsPath}/",assetBundleManifest.GetAllAssetBundles().First(), _assetBundleName + Guid.NewGuid());
+            _message =
+                $"Successfully created assetbundle at {Path.Combine(Application.streamingAssetsPath,newAssetBundleName )}";
+            LogMessages.Add(_message);
+            Debug.Log(_message);
+            AssetImporter.GetAtPath(fileToRenameAssetBundle).SetAssetBundleNameAndVariant(oldAssetBundleName, "");
+            AssetDatabase.RemoveUnusedAssetBundleNames();
             _isBuild = true;
         }
 
@@ -120,30 +159,6 @@ namespace AssetBundles.Editor
                 }
 
             }
-        }
-        
-        public static void SetAssetBundle( string filepath, string oldAssetBundleName,string newAssetBundleName = "", string assetBundleVariant = "" )
-        {
-            string meta = ".meta";
-            string manifest = ".manifest";
-            var metaFilePath = filepath + oldAssetBundleName + meta;
-            var lines        = File.ReadAllLines( metaFilePath );
-            var name         = "assetBundleName: " + newAssetBundleName;
-            var variant      = "assetBundleVariant: " + assetBundleVariant;
-            for( var i = 0; i < lines.Length; i++ )
-            {
-                lines[i] = Regex.Replace( lines[i], @"assetBundleName: \S*", name );
-                lines[i] = Regex.Replace( lines[i], @"assetBundleVariant: \S*", variant );
-            }
-            File.WriteAllLines(metaFilePath , lines);
-            File.Move(filepath + oldAssetBundleName, filepath + newAssetBundleName);
-            File.Move(filepath + oldAssetBundleName + meta, filepath + newAssetBundleName + meta);
-            File.Move(filepath + oldAssetBundleName + manifest, filepath + newAssetBundleName + manifest);
-            File.Move(filepath + oldAssetBundleName + manifest + meta, filepath + newAssetBundleName + manifest + meta);
-            _message =
-                $"Successfully created assetbundle at {filepath + newAssetBundleName} ";
-            LogMessages.Add(_message);
-            Debug.Log(_message);
         }
     }
 }
