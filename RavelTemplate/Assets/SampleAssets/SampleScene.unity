@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379b34b2c7ff0374485e922f18558402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  click:
+  onTrigger:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5866666020817265873}
@@ -467,6 +467,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  networked: 1
 --- !u!65 &888873835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -640,12 +641,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b89f852a2a2a34e94a7000fd939990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger:
+  onTrigger:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1098954999}
         m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
-        m_MethodName: Pause
+        m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -655,6 +656,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  networked: 1
 --- !u!1 &1098954997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b89f852a2a2a34e94a7000fd939990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger:
+  onTrigger:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1098954999}
@@ -1073,8 +1075,9 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
+  networked: 1
 --- !u!1 &2087440500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379b34b2c7ff0374485e922f18558402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  click:
+  onTrigger:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5866666020817265873}
@@ -1122,6 +1125,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  networked: 1
 --- !u!65 &2087440502
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -3,5 +3,6 @@ using UnityEngine.Events;
 
 public class Trigger : MonoBehaviour
 {
-    public UnityEvent trigger;
+    public UnityEvent onTrigger;
+    public bool networked = true;
 }
