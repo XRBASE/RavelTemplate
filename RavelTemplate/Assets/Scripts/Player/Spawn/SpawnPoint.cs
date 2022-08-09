@@ -3,7 +3,17 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    #if UNITY_EDITOR
+    public void MoveToSpawnPoint()
+    {
+
+    }
+
+    public void TeleportToSpawnPoint()
+    {
+
+    }
+    
+#if UNITY_EDITOR
 [CustomEditor(typeof(SpawnPoint))]
     private class SpawnPointEditor : Editor
     {
