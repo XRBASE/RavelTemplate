@@ -19,6 +19,7 @@ namespace AssetBundles.Editor
         [MenuItem("Ravel/Build AssetBundles")]
         public static void AssetBundleGeneratorEditorWindow()
         {
+            EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
             GetWindow<AssetBundleGenerator>("Asset Bundle Generator");
         }
         
