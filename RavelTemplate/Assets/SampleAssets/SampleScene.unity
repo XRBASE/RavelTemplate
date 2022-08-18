@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &31318574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 31318575}
+  - component: {fileID: 31318576}
+  m_Layer: 0
+  m_Name: IdProvider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &31318575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31318574}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1825614455}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &31318576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31318574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b052d0db58ead404ab3f6358e5783ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &315014247
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379b34b2c7ff0374485e922f18558402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _id: 3
   onTrigger:
     m_PersistentCalls:
       m_Calls:
@@ -467,6 +512,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  delayed: 0
+  delayTime: 0
   networked: 1
 --- !u!65 &888873835
 BoxCollider:
@@ -641,6 +688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b89f852a2a2a34e94a7000fd939990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _id: 4
   onTrigger:
     m_PersistentCalls:
       m_Calls:
@@ -656,6 +704,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  delayed: 0
+  delayTime: 0
   networked: 1
 --- !u!1 &1098954997
 GameObject:
@@ -854,6 +904,38 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: ae64e46626a2f6b42bc9c9d3c174fd57, type: 2}
   m_BuildHeightMesh: 0
+--- !u!1 &1825614454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1825614455}
+  m_Layer: 0
+  m_Name: Management
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1825614455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825614454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 31318575}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1852313337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,6 +1144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b89f852a2a2a34e94a7000fd939990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _id: 7
   onTrigger:
     m_PersistentCalls:
       m_Calls:
@@ -1077,6 +1160,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  delayed: 0
+  delayTime: 0
   networked: 1
 --- !u!1 &2087440500
 GameObject:
@@ -1110,6 +1195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379b34b2c7ff0374485e922f18558402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _id: 8
   onTrigger:
     m_PersistentCalls:
       m_Calls:
@@ -1125,6 +1211,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  delayed: 0
+  delayTime: 0
   networked: 1
 --- !u!65 &2087440502
 BoxCollider:

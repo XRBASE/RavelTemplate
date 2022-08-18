@@ -23,7 +23,7 @@ namespace AssetBundles.Editor
             GetWindow<AssetBundleGenerator>("Asset Bundle Generator");
         }
         
-        public static void BuildAllAssetBundles()
+        public static void BuildAssetBundle()
         {
             foreach (var allLoadedAssetBundle in AssetBundle.GetAllLoadedAssetBundles())
             {
@@ -39,14 +39,14 @@ namespace AssetBundles.Editor
             string oldAssetBundleName = string.Empty;
             foreach (var findAsset in AssetDatabase.FindAssets("t: Scene"))
             {
-                var path = AssetDatabase.GUIDToAssetPath(findAsset);
-                if (!path.Contains("Packages"))
+                string sceneToBuildPath = AssetDatabase.GUIDToAssetPath(findAsset);
+                if (!sceneToBuildPath.Contains("Packages"))
                 {
-                    var assetBundleName = AssetDatabase.GetImplicitAssetBundleName(path);
+                    var assetBundleName = AssetDatabase.GetImplicitAssetBundleName(sceneToBuildPath);
                     if (assetBundleName != string.Empty)
                     {
                         oldAssetBundleName = assetBundleName;
-                        fileToRenameAssetBundle = path;
+                        fileToRenameAssetBundle = sceneToBuildPath;
                         foundAssetBundles++;
                     }
                     if (foundAssetBundles > 1)
@@ -54,12 +54,12 @@ namespace AssetBundles.Editor
                         _message =
                             "Multiple scenes are marked as an assetbundle, please make sure exactly one scene is included in the assetbundle and you have exactly one assetbundle";
                         ErrorMessages.Add(_message);
-                        _message = path;
+                        _message = sceneToBuildPath;
                         ErrorMessages.Add(_message);
-                        _message = AssetDatabase.GetImplicitAssetBundleName(path);
+                        _message = AssetDatabase.GetImplicitAssetBundleName(sceneToBuildPath);
                         ErrorMessages.Add(_message);
-                        Debug.LogError(path);
-                        Debug.LogError(AssetDatabase.GetImplicitAssetBundleName(path));
+                        Debug.LogError(sceneToBuildPath);
+                        Debug.LogError(AssetDatabase.GetImplicitAssetBundleName(sceneToBuildPath));
                         Debug.LogError(_message);
                         return;
                     }
@@ -135,7 +135,7 @@ namespace AssetBundles.Editor
                 _isBuild = false;
                 LogMessages.Clear();
                 ErrorMessages.Clear();
-                BuildAllAssetBundles();
+                BuildAssetBundle();
             }
             GUI.contentColor = Color.green;
             foreach (var message in LogMessages)
