@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace AssetBundles.Editor
 {
@@ -15,13 +16,15 @@ namespace AssetBundles.Editor
         private static string _message;
         private static string _assetBundleName = string.Empty;
         private static bool _isBuild;
-        
+
         [MenuItem("Ravel/Build AssetBundles")]
         public static void AssetBundleGeneratorEditorWindow()
         {
-            EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
             GetWindow<AssetBundleGenerator>("Asset Bundle Generator");
-        }
+            FindObjectOfType<IdProvider>().IndexObjects(SceneManager.GetActiveScene());
+            EditorSceneManager.SaveModifiedScenesIfUserWantsTo(new [] {SceneManager.GetActiveScene()
+        });
+    }
         
         public static void BuildAssetBundle()
         {

@@ -8,21 +8,28 @@ using UnityEngine.SceneManagement;
 #if UNITY_EDITOR
 public class IdProvider : MonoBehaviour
 {
+    private IIdProvider[] _indexedObjects;
+    
     public IdProvider()
     {
-        EditorSceneManager.sceneSaving += IndexObjects;
+        EditorSceneManager.sceneSaved += IndexObjects;
+
     }
-    public void IndexObjects(Scene scene = default, string sceneName = default)
+    public void IndexObjects(Scene scene)
     {
-        List<MonoBehaviour> allGameObjects = FindObjectsOfType<MonoBehaviour>().ToList();
-        for (var i = 0; i < allGameObjects.Count; i++)
+        var iidIdProviderObjects =  FindObjectsOfType<MonoBehaviour>().OfType<IIdProvider>().ToArray();
+
+        for (var i = 0; i < iidIdProviderObjects.Length; i++)
         {
-            if (allGameObjects[i] is IIdProvider)
-            {
-                (allGameObjects[i] as IIdProvider)?.SetId(i+1);
-            }
+            iidIdProviderObjects[i].SetId(i + 1);
         }
-        EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
+
+        if (_indexedObjects == null ||iidIdProviderObjects.Length != _indexedObjects.Length)
+        {
+            EditorSceneManager.MarkSceneDirty(scene);
+            _indexedObjects = iidIdProviderObjects;
+        }
+
     }
 }
 #endif
