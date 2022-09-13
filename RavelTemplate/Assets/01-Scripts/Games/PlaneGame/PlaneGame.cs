@@ -1,11 +1,12 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class PlaneGame : MonoBehaviour
 {
     [SerializeField] private MonoPath _path;
-    [SerializeField] private PlaneController _planePrefab;
-    [SerializeField] private Collectible _collectiblePrefab;
+    [SerializeField] private List<PlaneController> _planePrefabs;
+    [SerializeField] private PointsCollectible _pointsCollectiblePrefab;
     [SerializeField] private Transform _startPos;
     
     [SerializeField] private Countdown _countdown;
