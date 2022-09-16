@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controller[15]
       objectReference: {fileID: 0}
+    - target: {fileID: 7972524731357275331, guid: e915f42aa2c60ce428fe6af4b792d4ee,
+        type: 3}
+      propertyPath: _settings.speed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e915f42aa2c60ce428fe6af4b792d4ee, type: 3}
 --- !u!4 &3472569879559509581 stripped
@@ -90,17 +95,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3a08d6afb658e1d4292c862d996f1b49,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.52
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a08d6afb658e1d4292c862d996f1b49,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.52
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a08d6afb658e1d4292c862d996f1b49,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.52
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a08d6afb658e1d4292c862d996f1b49,
         type: 3}

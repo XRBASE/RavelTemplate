@@ -15,17 +15,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 26fd7a263d81f0e4ca1d1e90662e7efa,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26fd7a263d81f0e4ca1d1e90662e7efa,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26fd7a263d81f0e4ca1d1e90662e7efa,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26fd7a263d81f0e4ca1d1e90662e7efa,
         type: 3}
@@ -150,7 +150,7 @@ PrefabInstance:
     - target: {fileID: 170784315950645628, guid: e915f42aa2c60ce428fe6af4b792d4ee,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.51
+      value: -3.37
       objectReference: {fileID: 0}
     - target: {fileID: 170784315950645628, guid: e915f42aa2c60ce428fe6af4b792d4ee,
         type: 3}
@@ -226,6 +226,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Controller[30]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972524731357275331, guid: e915f42aa2c60ce428fe6af4b792d4ee,
+        type: 3}
+      propertyPath: _settings.pitch
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972524731357275331, guid: e915f42aa2c60ce428fe6af4b792d4ee,
+        type: 3}
+      propertyPath: _settings.speed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e915f42aa2c60ce428fe6af4b792d4ee, type: 3}

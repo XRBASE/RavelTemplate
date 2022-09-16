@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 67246997239619070}
   - component: {fileID: 8724064325186241301}
   - component: {fileID: 8328123833452240315}
+  - component: {fileID: 5645577974558204288}
   m_Layer: 11
   m_Name: prop_2
   m_TagString: Untagged
@@ -167,6 +168,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!111 &5645577974558204288
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3239430169609111970}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 44f8df293f085fc4fa420318b65b95eb, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 44f8df293f085fc4fa420318b65b95eb, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &3991066986404738148
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +195,7 @@ GameObject:
   - component: {fileID: 6030465796992369823}
   - component: {fileID: 4893724563847758856}
   - component: {fileID: 4448193642102800962}
+  - component: {fileID: 203536898796869617}
   m_Layer: 11
   m_Name: prop_1
   m_TagString: Untagged
@@ -251,6 +269,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!111 &203536898796869617
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3991066986404738148}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 44f8df293f085fc4fa420318b65b95eb, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 44f8df293f085fc4fa420318b65b95eb, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &4613775370435582035
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +535,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Controller[19]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972524731357275331, guid: e915f42aa2c60ce428fe6af4b792d4ee,
+        type: 3}
+      propertyPath: _settings.speed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e915f42aa2c60ce428fe6af4b792d4ee, type: 3}
