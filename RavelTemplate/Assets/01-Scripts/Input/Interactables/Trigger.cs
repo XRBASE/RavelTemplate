@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,6 +17,8 @@ public class Trigger : MonoBehaviour, IIdProvider
 
     public void SetId(int id)
     {
-        _id = id;
+        var so = new SerializedObject(this);
+        so.FindProperty("_id").intValue = id;
+        so.ApplyModifiedProperties();
     }
 }

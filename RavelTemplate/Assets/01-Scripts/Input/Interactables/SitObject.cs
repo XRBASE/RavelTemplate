@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class SitObject : MonoBehaviour,IIdProvider
@@ -9,7 +10,9 @@ public class SitObject : MonoBehaviour,IIdProvider
     public Transform sitTransform;
     public void SetId(int id)
     {
-        chairId = id;
+        var so = new SerializedObject(this);
+        so.FindProperty("chairId").intValue = id;
+        so.ApplyModifiedProperties();
     }
 
     public void SendSit()
