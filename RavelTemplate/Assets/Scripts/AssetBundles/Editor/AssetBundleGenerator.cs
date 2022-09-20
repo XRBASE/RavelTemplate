@@ -21,9 +21,7 @@ namespace AssetBundles.Editor
         public static void AssetBundleGeneratorEditorWindow()
         {
             GetWindow<AssetBundleGenerator>("Asset Bundle Generator");
-            FindObjectOfType<IdProvider>().IndexObjects(SceneManager.GetActiveScene());
-            EditorSceneManager.SaveModifiedScenesIfUserWantsTo(new [] {SceneManager.GetActiveScene()
-        });
+            EditorSceneManager.SaveModifiedScenesIfUserWantsTo(new [] {SceneManager.GetActiveScene()});
     }
         
         public static void BuildAssetBundle()

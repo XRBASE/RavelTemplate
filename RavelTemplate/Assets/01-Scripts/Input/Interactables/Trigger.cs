@@ -17,8 +17,10 @@ public class Trigger : MonoBehaviour, IIdProvider
 
     public void SetId(int id)
     {
+        #if UNITY_EDITOR
         var so = new SerializedObject(this);
         so.FindProperty("_id").intValue = id;
         so.ApplyModifiedProperties();
+        #endif
     }
 }

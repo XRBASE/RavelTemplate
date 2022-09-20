@@ -8,12 +8,16 @@ public class SitObject : MonoBehaviour,IIdProvider
     public int chairId;
     [Tooltip("You can adjust the position and rotation of the seat with this transform")]
     public Transform sitTransform;
+    
     public void SetId(int id)
     {
+#if UNITY_EDITOR
         var so = new SerializedObject(this);
         so.FindProperty("chairId").intValue = id;
         so.ApplyModifiedProperties();
+#endif
     }
+
 
     public void SendSit()
     {
