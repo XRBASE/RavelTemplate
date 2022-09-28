@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7bb328d9e108f42ae3412c31d0d082, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  name: Test
+  hasScore: 1
+  score:
+    _type: 1
+    _maxHighScoreCount: 5
+  _phases:
+  - rid: 5036574061499777039
+  - rid: 5036574040784371712
+  - rid: 5036574102967812098
+  - rid: 5036574040784371713
+  - rid: 5036574081590755328
+  - rid: 5036574102967812097
+  references:
+    version: 2
+    RefIds:
+    - rid: 5036574040784371712
+      type: {class: CountdownComposite, ns: Base.Ravel.Games.Composite, asm: Assembly-CSharp}
+      data:
+        name: Countdown
+        _definition: {fileID: 11400000}
+        steps: 5
+        stepDuration: 1
+        _controllerPrefab: {fileID: 7365570596508032135, guid: 2fccb2122a015174d831b1b48159942b,
+          type: 3}
+    - rid: 5036574040784371713
+      type: {class: CollectComposite, ns: Base.Ravel.Games.Composite, asm: Assembly-CSharp}
+      data:
+        name: CollectStuff
+        _definition: {fileID: 11400000}
+        _collectiblesPrefab: {fileID: 4179383934687104119, guid: 5334581f526678e4586380664b60fa3f,
+          type: 3}
+    - rid: 5036574061499777039
+      type: {class: ChangePlayerComposite, ns: , asm: Assembly-CSharp}
+      data:
+        name: newPlayer_Plane
+        _definition: {fileID: 11400000}
+        _changeToCustom: 1
+        _playerPrefab: {fileID: 4979094849692488519, guid: 7190fea4b8987da468852da1372a2f07,
+          type: 3}
+    - rid: 5036574081590755328
+      type: {class: ChangePlayerComposite, ns: , asm: Assembly-CSharp}
+      data:
+        name: ReturnToOldPlayer
+        _definition: {fileID: 11400000}
+        _changeToCustom: 0
+        _playerPrefab: {fileID: 0}
+    - rid: 5036574102967812097
+      type: {class: EnableCustomPlayerMovementComposite, ns: , asm: Assembly-CSharp}
+      data:
+        name: DisablePlayerMovement
+        _definition: {fileID: 11400000}
+        _setMovementEnabled: 0
+    - rid: 5036574102967812098
+      type: {class: EnableCustomPlayerMovementComposite, ns: , asm: Assembly-CSharp}
+      data:
+        name: EnablePlayerMovement
+        _definition: {fileID: 11400000}
+        _setMovementEnabled: 1
