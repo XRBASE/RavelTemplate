@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -6,23 +5,12 @@ using UnityEditor;
 
 public class SpawnPoint : MonoBehaviour
 {
-    
     public const int DEFAULT = 0;
 
-    private static Dictionary<int, SpawnPoint> _spawnPoints;
-
     [SerializeField] private int _id;
+    public void MoveToSpawnPoint() { }
     
-    
-    public void MoveToSpawnPoint()
-    {
-
-    }
-
-    public void TeleportToSpawnPoint()
-    {
-
-    }
+    public void TeleportToSpawnPoint() { }
     
 #if UNITY_EDITOR
 [CustomEditor(typeof(SpawnPoint))]

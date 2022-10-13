@@ -7,9 +7,7 @@ public class InSpaceTeleporter : MonoBehaviour
 {
     [SerializeField] private int _gotoId = -1;
     
-    public void TeleportPlayer()
-    {
-    }
+    public void TeleportPlayer() { }
     
 #if UNITY_EDITOR
     [CustomEditor(typeof(InSpaceTeleporter))]
