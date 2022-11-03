@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a58ff87a7611243b0caf5d9422287e, type: 3}
+  m_Name: TalentScan
+  m_EditorClassIdentifier: 
+  questions:
+  - id: 0
+    question: Ik ben goed in..oplossen van problemen
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 1
+    question: Ik ben goed in..analyseren van gegevens
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 2
+    question: Ik ben goed in..processen monitoren
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 3
+    question: Ik ben goed in..trainen van mensen
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 4
+    question: Ik ben goed in..verlenen van zorg
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 5
+    question: Ik ben goed in..coachen en begeleiden
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 6
+    question: Ik ben goed in..kwaliteit bewaken
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 7
+    question: Ik ben goed in..controleren van mensen en processen
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 8
+    question: Ik ben goed in..rapporteren
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 9
+    question: Ik ben goed in..ontwerpen van producten
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 10
+    question: Ik ben goed in..ontwikkelen software en inrichten systemen
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 11
+    question: "Ik ben goed in..cre\xEBren van nieuwe dingen"
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 12
+    question: Ik ben goed in..onderhandelen met anderen
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 13
+    question: Ik ben goed in..aangaan en onderhouden van relaties
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 14
+    question: Ik ben goed in..verkopen van producten en diensten
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 15
+    question: "Ik ben goed in..co\xF6rdineren en sturen"
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 16
+    question: Ik ben goed in..bepalen van doelen en strategie
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 17
+    question: Ik ben goed in..plannen en organiseren
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 18
+    question: Ik ben goed in..repareren en onderhouden
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 19
+    question: Ik ben goed in..bedienen van machines
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
+  - id: 20
+    question: Ik ben goed in..besturen van voertuigen
+    possibleAnswers:
+    - Nee
+    - Een beetje
+    - Ja
