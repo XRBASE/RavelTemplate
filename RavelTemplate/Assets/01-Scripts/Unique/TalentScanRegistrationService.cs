@@ -10,6 +10,7 @@ namespace Base.Ravel.Unique
         [SerializeField] private TMP_InputField _lastName;
         [SerializeField] private TMP_InputField _email;
         [SerializeField] private TMP_InputField _phoneNumber;
+        [SerializeField] private Toggle _permission;
         [SerializeField] private Button _submit;
     }
 }
