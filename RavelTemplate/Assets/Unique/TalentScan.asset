@@ -9,173 +9,159 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98a58ff87a7611243b0caf5d9422287e, type: 3}
+  m_Script: {fileID: 11500000, guid: 190560d2c13c24649aadaa9fd66b113c, type: 3}
   m_Name: TalentScan
   m_EditorClassIdentifier: 
-  questions:
-  - id: 0
-    question: 'Ik ben goed in..
+  questionnaire:
+    questions:
+    - question: 'Ik ben goed in..
 
-      <color=#D2BDFF>oplossen van problemen.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 1
-    question: 'Ik ben goed in..
+        <color=#D2BDFF>oplossen van problemen.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#D2BDFF>analyseren van gegevens.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 2
-    question: 'Ik ben goed in..
+        <color=#D2BDFF>analyseren van gegevens.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#D2BDFF>processen monitoren.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 3
-    question: 'Ik ben goed in..
+        <color=#D2BDFF>processen monitoren.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#D2BDFF>trainen van mensen.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 4
-    question: 'Ik ben goed in..
+        <color=#D2BDFF>trainen van mensen.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#D2BDFF>verlenen van zorg.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 5
-    question: 'Ik ben goed in..
+        <color=#D2BDFF>verlenen van zorg.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FF5C00>coachen en begeleiden.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 6
-    question: 'Ik ben goed in..
+        <color=#FF5C00>coachen en begeleiden.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FF5C00>kwaliteit bewaken.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 7
-    question: 'Ik ben goed in..
+        <color=#FF5C00>kwaliteit bewaken.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FF5C00>controleren van mensen en processen.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 8
-    question: 'Ik ben goed in..
+        <color=#FF5C00>controleren van mensen
+        en processen.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FF5C00>rapporteren.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 9
-    question: 'Ik ben goed in..
+        <color=#FF5C00>rapporteren.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FF5C00>ontwerpen van producten.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 10
-    question: 'Ik ben goed in..
+        <color=#FF5C00>ontwerpen van producten.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FFAC00>ontwikkelen software en inrichten
-      systemen.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 11
-    question: "Ik ben goed in..\n<color=#FFAC00>cre\xEBren van nieuwe dingen.</color>"
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 12
-    question: 'Ik ben goed in..
+        <color=#FFAC00>ontwikkelen software en
+        inrichten systemen.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FFAC00>onderhandelen met anderen.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 13
-    question: 'Ik ben goed in..
+        <color=#FFAC00>cre\xEBren van nieuwe
+        dingen.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FFAC00>aangaan en onderhouden van
-      relaties.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 14
-    question: 'Ik ben goed in..
+        <color=#FFAC00>onderhandelen met anderen.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FFAC00>verkopen van producten en diensten.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 15
-    question: "Ik ben goed in..\n<color=#FDA0FF>co\xF6rdineren en sturen.</color>"
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 16
-    question: 'Ik ben goed in..
+        <color=#FFAC00>aangaan en onderhouden
+        van relaties.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FDA0FF>bepalen van doelen en strategie.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 17
-    question: 'Ik ben goed in..
+        <color=#FFAC00>verkopen van producten
+        en diensten.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: "Ik ben goed in..\r\n<color=#FDA0FF>co\xF6rdineren en sturen.</color>"
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FDA0FF>plannen en organiseren.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 18
-    question: 'Ik ben goed in..
+        <color=#FDA0FF>bepalen van doelen en
+        strategie.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FDA0FF>repareren en onderhouden.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 19
-    question: 'Ik ben goed in..
+        <color=#FDA0FF>plannen en organiseren.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FDA0FF>bedienen van machines.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
-  - id: 20
-    question: 'Ik ben goed in..
+        <color=#FDA0FF>repareren en onderhouden.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
 
-      <color=#FDA0FF>besturen van voertuigen.</color>'
-    possibleAnswers:
-    - Nee
-    - Een beetje
-    - Ja
+        <color=#FDA0FF>bedienen van machines.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja
+    - question: 'Ik ben goed in..
+
+        <color=#FDA0FF>besturen van voertuigen.</color>'
+      possibleAnswers:
+      - Nee
+      - Een beetje
+      - Ja

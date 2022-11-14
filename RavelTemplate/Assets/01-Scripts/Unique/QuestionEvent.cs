@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class QuestionEvent : MonoBehaviour
+namespace Base.Ravel.Questionnaires
 {
-    [SerializeField] private int _questionId;
-    
-    [SerializeField] private UnityEvent<int> _onQuestionAnsweredId;
-    [SerializeField] private UnityEvent _onQuestionAnswered;
+    public abstract class QuestionEvent : MonoBehaviour
+    {
+        [SerializeField] protected int _questionId;
+
+        [SerializeField] protected UnityEvent<int> _onQuestionAnsweredId;
+        [SerializeField] protected UnityEvent _onQuestionAnswered;
+    }
 }

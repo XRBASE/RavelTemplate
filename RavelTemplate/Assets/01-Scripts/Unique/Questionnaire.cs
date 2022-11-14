@@ -1,37 +1,14 @@
 using System;
-using UnityEngine;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
-[CreateAssetMenu(fileName = "Questionnaire", menuName = "Ravel/Questionnaire")]
-public class Questionnaire : ScriptableObject
+namespace Base.Ravel.Questionnaires
 {
-    public Question[] questions;
-    
-
-#if UNITY_EDITOR
-    [CustomEditor(typeof(Questionnaire))]
-    private class QuestionnaireEditor : Editor
+    /// <summary>
+    /// Generic question list class with T type for answers
+    /// </summary>
+    /// <typeparam name="T">Type of the answer option for the questions.</typeparam>
+    [Serializable]
+    public class Questionnaire<T>
     {
-        public override void OnInspectorGUI()
-        {
-            DrawDefaultInspector();
-            Questionnaire q =(Questionnaire) target;
-            if (GUILayout.Button("Set question id's")) {
-                for (int i = 0; i < q.questions.Length; i++) {
-                    q.questions[i].id = i;
-                }
-            }
-        }
+        public Question<T>[] questions;
     }
-#endif
-}
-
-[Serializable]
-public class Question
-{
-    public int id;
-    public string question;
-    public string[] possibleAnswers;
 }
