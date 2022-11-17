@@ -221,7 +221,7 @@ MonoBehaviour:
   delayed: 0
   delayTime: 0
   _overrideLayerMask: 0
-  _id: 1
+  _id: 7
   interactableGroup: 0
   onHoverEnter:
     m_PersistentCalls:
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52dc7f9cdfadfae4e894717b0621a960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chairId: 2
+  chairId: 8
   sitTransform: {fileID: 2130797863}
 --- !u!65 &89403630
 BoxCollider:
@@ -631,7 +631,7 @@ MonoBehaviour:
   delayed: 0
   delayTime: 0
   _overrideLayerMask: 0
-  _id: 3
+  _id: 9
   interactableGroup: 0
   onHoverEnter:
     m_PersistentCalls:
@@ -917,7 +917,7 @@ MonoBehaviour:
   delayed: 0
   delayTime: 0
   _overrideLayerMask: 0
-  _id: 4
+  _id: 10
   interactableGroup: 0
   onHoverEnter:
     m_PersistentCalls:
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52dc7f9cdfadfae4e894717b0621a960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chairId: 5
+  chairId: 11
   sitTransform: {fileID: 259407175}
 --- !u!65 &520389741
 BoxCollider:
@@ -1792,6 +1792,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1682877079}
   m_CullTransparentMesh: 1
+--- !u!1001 &1778619233
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8488689796694868192, guid: 6138052f5e3c8d447bb783605c72a93d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488689796694868192, guid: 6138052f5e3c8d447bb783605c72a93d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488689796694868192, guid: 6138052f5e3c8d447bb783605c72a93d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488689796694868192, guid: 6138052f5e3c8d447bb783605c72a93d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488689796694868192, guid: 6138052f5e3c8d447bb783605c72a93d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488689796694868192, guid: 6138052f5e3c8d447bb783605c72a93d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488689796694868192, guid: 6138052f5e3c8d447bb783605c72a93d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488689796694868192, guid: 6138052f5e3c8d447bb783605c72a93d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488689796694868192, guid: 6138052f5e3c8d447bb783605c72a93d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488689796694868192, guid: 6138052f5e3c8d447bb783605c72a93d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488689796694868192, guid: 6138052f5e3c8d447bb783605c72a93d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488689796694868195, guid: 6138052f5e3c8d447bb783605c72a93d,
+        type: 3}
+      propertyPath: m_Name
+      value: DJ Table
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6138052f5e3c8d447bb783605c72a93d, type: 3}
 --- !u!1 &1852313337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,7 +2056,7 @@ MonoBehaviour:
   delayed: 0
   delayTime: 0
   _overrideLayerMask: 0
-  _id: 6
+  _id: 12
   interactableGroup: 0
   onHoverEnter:
     m_PersistentCalls:
