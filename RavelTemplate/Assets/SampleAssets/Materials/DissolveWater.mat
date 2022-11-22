@@ -71,7 +71,7 @@ Material:
     - Color_93e06cd551a5449091bcde90b46765a0: {r: 0, g: 0.50980395, b: 0.42002845,
         a: 0.19607843}
     - Vector2_4351ac2be1d74054986ec5378db9d578: {r: 50, g: 50, b: 0, a: 0}
-    - _Albedo: {r: 0, g: 0, b: 0, a: 0}
+    - _Albedo: {r: 1, g: 1, b: 1, a: 0}
     - _EdgeColor: {r: 0, g: 4.0156865, b: 766.9961, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &2413061243894700496
