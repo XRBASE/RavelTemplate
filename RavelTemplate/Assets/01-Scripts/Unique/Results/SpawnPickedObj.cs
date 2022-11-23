@@ -7,5 +7,5 @@ using UnityEngine;
 public class SpawnPickedObj : QuestionEvent
 {
     [SerializeField, Tooltip("This is the transform under which the object is spawned (zero local position and rotation, but original scale).")] 
-    private Transform objParent;
+    private Transform _objParent;
 }

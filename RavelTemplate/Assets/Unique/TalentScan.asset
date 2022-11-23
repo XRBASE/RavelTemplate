@@ -95,8 +95,7 @@ MonoBehaviour:
       - Ja
     - question: 'Ik ben goed in..
 
-        <color=#FFAC00>cre\xEBren van nieuwe
-        dingen.</color>'
+        <color=#FFAC00>cre\xEBren van nieuwe dingen.</color>'
       possibleAnswers:
       - Nee
       - Een beetje
@@ -131,8 +130,7 @@ MonoBehaviour:
       - Ja
     - question: 'Ik ben goed in..
 
-        <color=#FDA0FF>bepalen van doelen en
-        strategie.</color>'
+        <color=#FDA0FF>bepalen van doelen en strategie.</color>'
       possibleAnswers:
       - Nee
       - Een beetje
