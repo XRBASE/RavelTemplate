@@ -16,4 +16,9 @@ public class TweenShaderFloat : MonoBehaviour
     public void TweenValue()
     {
     }
+    
+    public void StopTween()
+    {
+
+    }
 }
