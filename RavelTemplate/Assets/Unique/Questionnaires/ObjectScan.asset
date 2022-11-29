@@ -14,38 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questionnaire:
     questions:
-    - question: Pick your favorite type of fruit
+    - question: Ben jij een vroege vogel of een nachtuil?
       possibleAnswers:
-      - {fileID: 919132149155446097, guid: 1b2dc2301fcff1249b5674b3194266c2, type: 3}
-      - {fileID: 919132149155446097, guid: e08b276f3b1005241917c37b3222af1c, type: 3}
-      - {fileID: 919132149155446097, guid: 6a1d64e717154d84bad0d9e2088674ff, type: 3}
-    - question: What fruit is the best at piloting an airplane?
+      - {fileID: 6199467637927895135, guid: 10f61b43d28e2244a8e2df94bcc6caf3, type: 3}
+      - {fileID: 5109776782076353834, guid: 248740b8a5f24c14f8187d18535c4d9f, type: 3}
+    - question: Ben je meer in je element als je individueel of in een team werkt?
       possibleAnswers:
-      - {fileID: 919132149155446097, guid: 1b2dc2301fcff1249b5674b3194266c2, type: 3}
-      - {fileID: 919132149155446097, guid: e08b276f3b1005241917c37b3222af1c, type: 3}
-      - {fileID: 919132149155446097, guid: 6a1d64e717154d84bad0d9e2088674ff, type: 3}
-    - question: What fruit is the best at piloting an airplane?
+      - {fileID: 1121268670151655641, guid: 2aafc7ad6887eb54ab18c7c8e7fdabff, type: 3}
+      - {fileID: 6981556933073123522, guid: a96bfe29459eff346bd10882a2e8f53a, type: 3}
+    - question: Ben je liever in de natuur of bezig met technologie?
       possibleAnswers:
-      - {fileID: 919132149155446097, guid: 1b2dc2301fcff1249b5674b3194266c2, type: 3}
-      - {fileID: 919132149155446097, guid: e08b276f3b1005241917c37b3222af1c, type: 3}
-      - {fileID: 919132149155446097, guid: 6a1d64e717154d84bad0d9e2088674ff, type: 3}
-    - question: What fruit is the best at piloting an airplane?
+      - {fileID: 165603119117921094, guid: c271d3f4c78ae2d4093433a138eb5aeb, type: 3}
+      - {fileID: 1806935612843798109, guid: 3515ec4718204914398fc79998000a78, type: 3}
+    - question: Houdt je van spontaan werk oppakken of wil je liever gestructureerd
+        plannen en werken?
       possibleAnswers:
-      - {fileID: 919132149155446097, guid: 1b2dc2301fcff1249b5674b3194266c2, type: 3}
-      - {fileID: 919132149155446097, guid: e08b276f3b1005241917c37b3222af1c, type: 3}
-      - {fileID: 919132149155446097, guid: 6a1d64e717154d84bad0d9e2088674ff, type: 3}
-    - question: What fruit is the best at piloting an airplane?
+      - {fileID: 8477139782826431182, guid: 9f3716da970c77d42a2622575efd71d3, type: 3}
+      - {fileID: 8560072858930550916, guid: 5c22e46688671ae44963c3ebd4a56735, type: 3}
+    - question: Werk jij graag vanuit huis of toch echt liever op kantoor?
       possibleAnswers:
-      - {fileID: 919132149155446097, guid: 1b2dc2301fcff1249b5674b3194266c2, type: 3}
-      - {fileID: 919132149155446097, guid: e08b276f3b1005241917c37b3222af1c, type: 3}
-      - {fileID: 919132149155446097, guid: 6a1d64e717154d84bad0d9e2088674ff, type: 3}
-    - question: What fruit is the best at piloting an airplane?
+      - {fileID: 8144375942028145362, guid: ff250d50b814e3548b22a19eff686ff2, type: 3}
+      - {fileID: 1352191988882950556, guid: 160da06e4ac63b84bac80946f91b9ff0, type: 3}
+    - question: Omschrijf jij jezelf als meer creatief of als meer technisch?
       possibleAnswers:
-      - {fileID: 919132149155446097, guid: 1b2dc2301fcff1249b5674b3194266c2, type: 3}
-      - {fileID: 919132149155446097, guid: e08b276f3b1005241917c37b3222af1c, type: 3}
-      - {fileID: 919132149155446097, guid: 6a1d64e717154d84bad0d9e2088674ff, type: 3}
-    - question: What fruit is the best at piloting an airplane?
+      - {fileID: 4175934789168300181, guid: 4dcbfc7c8f4d008408bd951036c77e7a, type: 3}
+      - {fileID: 9000327051031435866, guid: 635e8e07014643348a7c81e52bedf21f, type: 3}
+    - question: Volg jij eerder je hart en gevoel of je hoofd en verstand?
       possibleAnswers:
-      - {fileID: 919132149155446097, guid: 1b2dc2301fcff1249b5674b3194266c2, type: 3}
-      - {fileID: 919132149155446097, guid: e08b276f3b1005241917c37b3222af1c, type: 3}
-      - {fileID: 919132149155446097, guid: 6a1d64e717154d84bad0d9e2088674ff, type: 3}
+      - {fileID: 2429954709406202216, guid: fbb400333c6878d4b96dabc5da524a96, type: 3}
+      - {fileID: 1011152952810788268, guid: e4a93f547667101469172c321f47456a, type: 3}
