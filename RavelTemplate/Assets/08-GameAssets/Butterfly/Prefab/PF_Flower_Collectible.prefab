@@ -55,12 +55,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 395fc89653029954c8bc31548d3e6b70,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 395fc89653029954c8bc31548d3e6b70,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 49.8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 395fc89653029954c8bc31548d3e6b70,
         type: 3}
@@ -107,3 +107,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _points: 10
+--- !u!111 &6347670858471715205
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3651477881222544322}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7bcac4f1e74f5f941b894f210e91272a, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7bcac4f1e74f5f941b894f210e91272a, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
