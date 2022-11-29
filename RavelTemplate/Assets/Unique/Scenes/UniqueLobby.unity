@@ -10111,28 +10111,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6049956783225975285, guid: c714efb9599584740917579fd2903cd1,
-        type: 3}
-      propertyPath: _id
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6446949068688726488, guid: c714efb9599584740917579fd2903cd1,
-        type: 3}
-      propertyPath: _scoreBoard
-      value: 
-      objectReference: {fileID: 5344835166414518398}
-    - target: {fileID: 6446949068688726488, guid: c714efb9599584740917579fd2903cd1,
-        type: 3}
-      propertyPath: _pointsCollectiblePrefab
-      value: 
-      objectReference: {fileID: 1856556824588059565, guid: 8cc7b2f3d5b669140bbfcf2d44faa69f,
-        type: 3}
-    - target: {fileID: 6446949068688726488, guid: c714efb9599584740917579fd2903cd1,
-        type: 3}
-      propertyPath: _planePrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 3389547925245229887, guid: 805be159bf28a874d8d9bf3e3ec491dd,
-        type: 3}
     - target: {fileID: 8992750174947867688, guid: c714efb9599584740917579fd2903cd1,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -10160,18 +10138,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c714efb9599584740917579fd2903cd1, type: 3}
---- !u!114 &5344835166414518398 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3972699062382828249, guid: c714efb9599584740917579fd2903cd1,
-    type: 3}
-  m_PrefabInstance: {fileID: 5344835166414518397}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db8dadf982c2a584a8241c269825c7d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5731849494816844532
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -94,7 +94,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 337.3
+  m_fontSize: 221.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 337.3
+  m_fontSize: 221.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -606,7 +606,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5344835168337388448}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.8721771, y: 17.215912, z: 0.0822525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -760,14 +760,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _path: {fileID: 8751560503638734232}
   _planePrefabs:
-  - {fileID: 8985864960107699402, guid: de262fa678ff23143b3690658d69edef, type: 3}
-  _pointsCollectiblePrefab: {fileID: 1188708026, guid: 048a7c36884adf5459d98d647214341c,
+  - {fileID: 3389547925245229887, guid: 805be159bf28a874d8d9bf3e3ec491dd, type: 3}
+  _pointsCollectiblePrefab: {fileID: 1856556824588059565, guid: 8cc7b2f3d5b669140bbfcf2d44faa69f,
     type: 3}
   _startPos: {fileID: 6446949067849765400}
   _countdown: {fileID: 2594467619606510424}
   _scoreVisual: {fileID: 742442473812594122}
   _scoreUI: {fileID: 4229737131491075007}
-  _scoreBoard: {fileID: 0}
+  _scoreBoard: {fileID: 3972699062382828249}
   _gameId: 1
 --- !u!1 &6743024748680926926
 GameObject:
@@ -1406,7 +1406,7 @@ MonoBehaviour:
   delayed: 0
   delayTime: 0
   _overrideLayerMask: 0
-  _id: 59
+  _id: 2
   interactableGroup: 0
   onHoverEnter:
     m_PersistentCalls:
