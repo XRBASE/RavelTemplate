@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190560d2c13c24649aadaa9fd66b113c, type: 3}
+  m_Name: TalentScan
+  m_EditorClassIdentifier: 
+  questionnaire:
+    questions:
+    - question: 'Op de werkvloer ben ik meestal:'
+      possibleAnswers:
+      - Lolletjes aan het maken
+      - Serieus
+    - question: 'Vrienden omschrijven mij als:'
+      possibleAnswers:
+      - Rustig
+      - Ongeduldig
+    - question: In een nieuwe groep mensen ben ik
+      possibleAnswers:
+      - De gangmaker
+      - De kat uit de boom aan het kijken
+    - question: 'Als ik een kast bij de Ikea heb gekocht, ga ik: '
+      possibleAnswers:
+      - Eerst de handleiding lezen
+      - Meteen aan de slag
+    - question: 'Bij een conflict zou ik het liefst:'
+      possibleAnswers:
+      - Discussie aangaan
+      - 'Confrontatie vermijden '
+    - question: 'Bij afspraken ben ik:'
+      possibleAnswers:
+      - Altijd op tijd
+      - Regelmatig (iets) te laat
+    - question: 'Op het eind van de werkdag is mijn bureau:'
+      possibleAnswers:
+      - Rommelig
+      - Netjes
