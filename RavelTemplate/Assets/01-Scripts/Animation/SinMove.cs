@@ -17,6 +17,8 @@ public class SinMove : MonoBehaviour
     private Vector3 _offset = new Vector3(0,0,0);
     [SerializeField, Tooltip("Per axis scalar, 0 to not use, 1 to move 1 unit, etc.")]
     private Vector3 _axes = new Vector3(1,1,1);
+    [SerializeField]
+    private Space _space = Space.World;
 
     [SerializeField, Tooltip("Is the animation playing (also works as play on awake).")]
     private bool _playing = true;
@@ -32,7 +34,15 @@ public class SinMove : MonoBehaviour
 
     private void Awake()
     {
-        _origin = transform.position;
+        if (_space == Space.World)
+        {
+            _origin = transform.position;
+        }
+        else
+        {
+            _origin = transform.localPosition;
+        }
+        
         SetUp();
     }
     
@@ -72,18 +82,25 @@ public class SinMove : MonoBehaviour
     {
         if (!_playing)
             return;
-        
+
         //Get sine value based on time and offset times frequency
         _value = new Vector3(
-            Get(_offset.x, _frequency.x), 
-            Get(_offset.y, _frequency.y), 
+            Get(_offset.x, _frequency.x),
+            Get(_offset.y, _frequency.y),
             Get(_offset.z, _frequency.z));
-        
+
         //scale result for each of the axes
         _value.Scale(_axes);
 
         //apply value as delta to transform
-        transform.position = _origin + _value;
+        if (_space == Space.World)
+        {
+            transform.position = _origin + _value;
+        }
+        else
+        {
+            transform.localPosition = _origin + _value;
+        }
     }
 
     private float Get(float offset, float freq)
