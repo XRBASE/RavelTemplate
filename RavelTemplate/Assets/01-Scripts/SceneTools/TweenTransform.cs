@@ -20,9 +20,11 @@ public class TweenTransform : MonoBehaviour
                         SetupSequence();
                         Play();
                 }
-
         }
 
+        /// <summary>
+        /// Setup tween sequence based on the amount of transforms serialised. translates from a-b and rotates from a-b
+        /// </summary>
         public void SetupSequence()
         {
                 if (tweenTransform == null)
@@ -49,12 +51,18 @@ public class TweenTransform : MonoBehaviour
                 _rotationSequence.SetLoops(looping ? -1 : 0);
         }
 
+        /// <summary>
+        /// Start the translate and rotate tween
+        /// </summary>
         public void Play()
         {
                 _positionSequence.Play();
                 _rotationSequence.Play();
         }
 
+        /// <summary>
+        /// Stops the translate and rotate tween
+        /// </summary>
         public void Stop()
         {
                 _positionSequence.Kill(true);
