@@ -2786,6 +2786,11 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1190782045896691948, guid: 38e7e5f0a84c78d4391aea950ba0442d,
+        type: 3}
+      propertyPath: playOnStart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1296958425278141988, guid: 38e7e5f0a84c78d4391aea950ba0442d,
         type: 3}
       propertyPath: m_LocalScale.x
