@@ -10,5 +10,14 @@ namespace Base.Ravel.Questionnaires
     public class Questionnaire<T>
     {
         public Question<T>[] questions;
+        
+        public int Length {
+            get { return questions.Length; }
+        }
+        
+        public Question<T> this[int id] {
+            get { return questions[id];}
+            set { questions[id] = value; }
+        }
     }
 }

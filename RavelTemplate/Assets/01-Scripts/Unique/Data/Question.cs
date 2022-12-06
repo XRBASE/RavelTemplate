@@ -9,7 +9,21 @@ namespace Base.Ravel.Questionnaires
     [Serializable]
     public abstract class Question
     {
+        /// <summary>
+        /// Get specific answer cast into an object.
+        /// </summary>
+        /// <param name="answerId">id of the answer.</param>
+        public abstract object this[int answerId] {
+            get;
+        }
+
+        /// <summary>
+        /// Amount of possible answers to this question.
+        /// </summary>
+        public abstract int AnswerCount { get; }
+
         [TextArea] public string question;
+
     }
 
     /// <summary>
@@ -19,6 +33,13 @@ namespace Base.Ravel.Questionnaires
     [Serializable]
     public class Question<T> : Question
     {
+        public override object this[int answerId] {
+            get { return possibleAnswers[answerId]; }
+        }
+        public override int AnswerCount {
+            get { return possibleAnswers.Length; }
+        }
+        
         public T[] possibleAnswers;
     }
 }

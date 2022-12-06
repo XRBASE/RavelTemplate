@@ -12,10 +12,7 @@ namespace Base.Ravel.Questionnaires
         public StringQuestionnaire _stringQuestionnaire;
         public ObjectQuestionnaire _objQuestionnaire;
         public bool playOnStart;
-                
-        public void StartQuestionnaire()
-        {
-            
-        }
+
+        public void StartQuestionnaire() { }
     }
 }

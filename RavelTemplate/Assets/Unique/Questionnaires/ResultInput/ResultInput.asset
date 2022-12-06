@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f76932ba5c0e334e94df78b10b670c1, type: 3}
+  m_Name: ResultInput
+  m_EditorClassIdentifier: 
+  _questionnaire: {fileID: 11400000, guid: 1cc7dcac4a2723d4fb1beba8f1f6c57b, type: 2}
+  _resultGroups:
+  - name: De aanpakker
+    description: Je bent een echte aanpakker en gaat het liefst zo snel mogelijk
+      aan de slag. Je wordt geprezen voor je doortastendheid, dit is een supergoede
+      eigenschap! Pas wel op dat je soms niet te snel gaat, geduld is een schone
+      zaak.
+    _prominentCategories: 0000000006000000
+  - name: De analist
+    description: Je hebt alle scenarios al in je hoofd laten afspelen. Uiteraard
+      kies jij voor de beste waar zowel jij als je collega's het gelukkigst van worden.
+      Je bent de steunpilaar in jouw team en dat gaat niet onopgemerkt. Een gezonde
+      portie zelfvertrouwen helpt jou groeien!
+    _prominentCategories: 0200000005000000
+  - name: De alleskunner
+    description: 'Je bent van alle markten thuis. Deze nieuwsgierigheid naar kennis
+      helpt je in het maken van weloverwogen beslissingen en zodoende help je ook
+      graag waar je kunt. Je hebt veel nieuwe prikkels nodig om het beste te functioneren,
+      let op dat je niet aan nieuwe projecten begint zonder de vorige af te ronden. '
+    _prominentCategories: 010000000300000004000000
+  _resultCategories:
+  - Daadkracht
+  - Behulpzaamheid
+  - Relativeringsvermogen
+  - Spontaniteit
+  - Flexibiliteit
+  - Accuratesse
+  - Durf
+  _questionData:
+  - name: 'Op de werkvloer ben ik meestal:'
+    _answers:
+    - name: Lolletjes aan het maken
+      answerResult:
+      - resultCategoryId: 2
+        worth: 2
+      - resultCategoryId: 3
+        worth: 1
+    - name: Serieus
+      answerResult:
+      - resultCategoryId: 5
+        worth: 2
+      - resultCategoryId: 0
+        worth: 1
+  - name: 'Vrienden omschrijven mij als:'
+    _answers:
+    - name: Rustig
+      answerResult:
+      - resultCategoryId: 5
+        worth: 2
+      - resultCategoryId: 2
+        worth: 1
+    - name: Ongeduldig
+      answerResult:
+      - resultCategoryId: 0
+        worth: 2
+      - resultCategoryId: 6
+        worth: 1
+  - name: In een nieuwe groep mensen ben ik
+    _answers:
+    - name: De gangmaker
+      answerResult:
+      - resultCategoryId: 3
+        worth: 2
+      - resultCategoryId: 6
+        worth: 1
+    - name: De kat uit de boom aan het kijken
+      answerResult:
+      - resultCategoryId: 2
+        worth: 2
+      - resultCategoryId: 1
+        worth: 1
+  - name: 'Als ik een kast bij de Ikea heb gekocht, ga ik: '
+    _answers:
+    - name: Eerst de handleiding lezen
+      answerResult:
+      - resultCategoryId: 5
+        worth: 2
+      - resultCategoryId: 1
+        worth: 1
+    - name: Meteen aan de slag
+      answerResult:
+      - resultCategoryId: 3
+        worth: 2
+      - resultCategoryId: 6
+        worth: 1
+  - name: 'Bij een conflict zou ik het liefst:'
+    _answers:
+    - name: Discussie aangaan
+      answerResult:
+      - resultCategoryId: 1
+        worth: 2
+      - resultCategoryId: 0
+        worth: 1
+    - name: 'Confrontatie vermijden '
+      answerResult:
+      - resultCategoryId: 2
+        worth: 2
+      - resultCategoryId: 1
+        worth: 1
+  - name: 'Bij afspraken ben ik:'
+    _answers:
+    - name: Altijd op tijd
+      answerResult:
+      - resultCategoryId: 5
+        worth: 2
+      - resultCategoryId: 0
+        worth: 1
+    - name: Regelmatig (iets) te laat
+      answerResult:
+      - resultCategoryId: 3
+        worth: 2
+      - resultCategoryId: 4
+        worth: 1
+  - name: 'Op het eind van de werkdag is mijn bureau:'
+    _answers:
+    - name: Rommelig
+      answerResult:
+      - resultCategoryId: 3
+        worth: 2
+      - resultCategoryId: 4
+        worth: 1
+    - name: Netjes
+      answerResult:
+      - resultCategoryId: 5
+        worth: 2
+      - resultCategoryId: 0
+        worth: 1
+  _setup: 1
