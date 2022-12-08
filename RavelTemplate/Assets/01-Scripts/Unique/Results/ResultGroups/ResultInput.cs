@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-namespace Base.Ravel.Questionnaires
+namespace Base.Ravel.Questionnaires.Data
 {
     [CreateAssetMenu(fileName = "ResultInput", menuName = "Ravel/ResultInput")]
     public class ResultInput : ScriptableObject
@@ -13,7 +13,7 @@ namespace Base.Ravel.Questionnaires
         /// <summary>
         /// Categories in which the user can score points, these are counted and mapped to the groups i.e. test results.
         /// </summary>
-        public string[] Categories {
+        public List<CategoryData> Categories {
             get { return _resultCategories; }
         }
         
@@ -39,7 +39,7 @@ namespace Base.Ravel.Questionnaires
         [SerializeField, Tooltip("Groups/Results, the score of the prominent categories determine the order of the groups for a user.")] 
         private ResultGroup[] _resultGroups;
         [SerializeField, Tooltip("The user earns points in these categories, based on the given answers, the categories are in term assigned to groups.")] 
-        private string[] _resultCategories;
+        private List<CategoryData> _resultCategories;
         [SerializeField, Tooltip("Data for each answer of each question. This data contains the categories in which an answer scores as well as the value that that score is incremented with.")]
         private QuestionData[] _questionData;
         
@@ -54,6 +54,9 @@ namespace Base.Ravel.Questionnaires
             
             [Tooltip("List of most important categories (by id), used to determine users group.")]
             public List<int> _prominentCategories;
+
+            [NonSerialized] public List<CategoryData> categories;
+            [NonSerialized] public float score;
         }
 
         [Serializable]
@@ -132,7 +135,7 @@ namespace Base.Ravel.Questionnaires
             so.ApplyModifiedProperties();
             
             if (_resultCategories == null) {
-                _resultCategories = Array.Empty<string>();
+                _resultCategories = new List<CategoryData>();
             }
 
             if (_questionData == null) {

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190560d2c13c24649aadaa9fd66b113c, type: 3}
   m_Name: TalentScan
   m_EditorClassIdentifier: 
+  _resultInput: {fileID: 11400000, guid: a37d98d7cc9a75c40b8e048e4fe3f282, type: 2}
   questionnaire:
     questions:
     - question: 'Op de werkvloer ben ik meestal:'

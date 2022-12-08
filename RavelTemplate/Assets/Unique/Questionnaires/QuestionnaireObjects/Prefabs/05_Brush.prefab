@@ -126,6 +126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3654730730197670447}
+  - component: {fileID: -2614956268662955492}
   m_Layer: 0
   m_Name: 05_Brush
   m_TagString: Untagged
@@ -142,13 +143,26 @@ Transform:
   m_GameObject: {fileID: 4175934789168300181}
   m_LocalRotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 400, y: 400, z: 400}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4038114336708071935}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2614956268662955492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175934789168300181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda2f80bd0d0cbe4c8582e11f9f51428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: creatief
 --- !u!1 &6773175949584856432
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using Base.Ravel.Questionnaires.Data;
 using UnityEngine;
 
 namespace Base.Ravel.Questionnaires
@@ -11,6 +12,7 @@ namespace Base.Ravel.Questionnaires
     {
         public StringQuestionnaire _stringQuestionnaire;
         public ObjectQuestionnaire _objQuestionnaire;
+        public ResultInput resultInput;
         public bool playOnStart;
 
         public void StartQuestionnaire() { }
