@@ -6,14 +6,14 @@ using UnityEditor;
 
 public class AddItemByLabel : MonoBehaviour
 {
-    [SerializeField, HideInInspector] private GameObject _prefab; 
+    [SerializeField] private GameObject _template;
     [SerializeField] private Transform _parent;
 
     private bool CheckPrefab()
     {
-        return (GetField(_prefab) != null);
+        return (GetField(_template) != null);
     }
-    
+
     public void AddItem(string value)
     {
 
@@ -21,20 +21,21 @@ public class AddItemByLabel : MonoBehaviour
 
     public void AddItem(object value)
     {
-        
+
     }
 
     private TMP_Text GetField(GameObject obj)
     {
         TMP_Text prefabField = obj.GetComponent<TMP_Text>();
-        if (prefabField == null) {
+        if (prefabField == null)
+        {
             prefabField = obj.GetComponentInChildren<TMP_Text>();
         }
 
         return prefabField;
     }
-
-#if UNITY_EDITOR
+}
+/*#if UNITY_EDITOR
     [CustomEditor(typeof(AddItemByLabel))]
     private class AddItemByLabelEditor : Editor
     {
@@ -45,7 +46,7 @@ public class AddItemByLabel : MonoBehaviour
             DrawDefaultInspector();
             
             EditorGUI.BeginChangeCheck();
-            instance._prefab = EditorGUILayout.ObjectField("prefab", instance._prefab, typeof(GameObject), true) as GameObject;
+            instance._template = EditorGUILayout.ObjectField("template", instance._template, typeof(GameObject), true) as GameObject;
             if (EditorGUI.EndChangeCheck() && !instance.CheckPrefab()) {
                 _showPrefabError = true;
             }
@@ -53,10 +54,10 @@ public class AddItemByLabel : MonoBehaviour
             if (_showPrefabError) {
                 EditorGUILayout.HelpBox("Current prefab does not contain TMP_Text component, this component won't function during runtime!", MessageType.Error);
             }
-            else if (instance._prefab == null) {
+            else if (instance._template == null) {
                 EditorGUILayout.HelpBox("prefab should contain TMP_Text component.", MessageType.Info);
             }
         }
     }
 #endif
-}
+}*/
