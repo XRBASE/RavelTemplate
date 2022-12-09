@@ -8,8 +8,6 @@ public abstract class DisplayPlayerInfo<T> : DisplayPlayerInfo
     [SerializeField] private InfoType _type;
     [SerializeField] private bool _retrieveOnAwake;
     
-    public virtual void GetInfo(){ }
-
     /// <summary>
     /// Check if generic type matches the type of data that will be retrieved, new types should be added tot this list.
     /// </summary>
